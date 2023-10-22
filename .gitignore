@@ -39,6 +39,7 @@ bld/
 #wwwroot/
 
 *.sln
+.test/
 
 # Visual Studio 2017 auto generated files
 Generated\ Files/
