@@ -21,7 +21,7 @@ It has been observed that the performance of the initblk instruction in the late
     - .NET Framework 4.8.1
 - .NET 7.0
   
-**Memory Segments**: Data ranging from `128 bytes` up to `2.0GiB`  
+**Memory Segments**: Data ranging from `256 bytes` up to `2.0GiB`  
 
 ### Observations
 On the `Skylake` microarchitecture, the latest .NET version still outperforms .NET Framework.  
