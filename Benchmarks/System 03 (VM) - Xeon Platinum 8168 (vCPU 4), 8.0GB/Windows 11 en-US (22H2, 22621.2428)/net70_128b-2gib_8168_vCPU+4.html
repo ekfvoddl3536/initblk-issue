@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Net70.Program-20231022-220526</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.9+228a464e8be6c580ad9408e98f18813f6407fb5a, Windows 11 (10.0.22621.2428/22H2/2022Update/SunValley2) (Hyper-V)
+Intel Xeon Platinum 8168 CPU 2.70GHz, 1 CPU, 4 logical and 2 physical cores
+.NET SDK 7.0.402
+  [Host]   : .NET 7.0.12 (7.0.1223.47720), X64 RyuJIT AVX2
+  .NET 7.0 : .NET 7.0.12 (7.0.1223.47720), X64 RyuJIT AVX2
+</code></pre>
+<pre><code>Job=.NET 7.0  Runtime=.NET 7.0  
+</code></pre>
+
+<table>
+<thead><tr><th>Method</th><th>Bytes</th><th>Mean        </th><th>Error      </th><th>StdDev     </th><th>Min         </th><th>Max         </th><th>Ratio</th>
+</tr>
+</thead><tbody><tr><td>Initblk</td><td>256</td><td>4.880 ns</td><td>0.2254 ns</td><td>0.6575 ns</td><td>4.059 ns</td><td>6.224 ns</td><td>1.00</td>
+</tr><tr><td>Initblk</td><td>512</td><td>5.175 ns</td><td>0.1248 ns</td><td>0.1106 ns</td><td>5.031 ns</td><td>5.369 ns</td><td>1.00</td>
+</tr><tr><td>Initblk</td><td>1024</td><td>8.130 ns</td><td>0.1204 ns</td><td>0.1126 ns</td><td>7.955 ns</td><td>8.249 ns</td><td>1.00</td>
+</tr><tr><td>Initblk</td><td>2048</td><td>18.040 ns</td><td>0.1423 ns</td><td>0.1261 ns</td><td>17.806 ns</td><td>18.264 ns</td><td>1.00</td>
+</tr><tr><td>Initblk</td><td>4096</td><td>35.957 ns</td><td>0.6350 ns</td><td>0.6794 ns</td><td>35.297 ns</td><td>38.066 ns</td><td>1.00</td>
+</tr><tr><td>Initblk</td><td>8192</td><td>81.599 ns</td><td>0.4500 ns</td><td>0.3757 ns</td><td>80.881 ns</td><td>82.220 ns</td><td>1.00</td>
+</tr><tr><td>Initblk</td><td>16384</td><td>159.070 ns</td><td>3.1879 ns</td><td>3.9150 ns</td><td>152.404 ns</td><td>168.184 ns</td><td>1.00</td>
+</tr><tr><td>Initblk</td><td>32768</td><td>443.919 ns</td><td>4.9413 ns</td><td>4.6221 ns</td><td>434.008 ns</td><td>451.731 ns</td><td>1.00</td>
+</tr><tr><td>Initblk</td><td>65536</td><td>1,232.791 ns</td><td>32.5781 ns</td><td>95.0320 ns</td><td>1,052.424 ns</td><td>1,474.114 ns</td><td>1.00</td>
+</tr><tr><td>Initblk</td><td>131072</td><td>2,808.628 ns</td><td>101.1835 ns</td><td>298.3420 ns</td><td>2,243.865 ns</td><td>3,409.814 ns</td><td>1.00</td>
+</tr><tr><td>Initblk</td><td>262144</td><td>6,270.183 ns</td><td>350.7954 ns</td><td>1,034.3281 ns</td><td>4,236.345 ns</td><td>8,267.406 ns</td><td>1.00</td>
+</tr><tr><td>Initblk</td><td>524288</td><td>15,445.768 ns</td><td>437.6939 ns</td><td>1,290.5504 ns</td><td>11,643.429 ns</td><td>18,303.104 ns</td><td>1.00</td>
+</tr><tr><td>Initblk</td><td>1048576</td><td>34,943.377 ns</td><td>688.7251 ns</td><td>1,650.1413 ns</td><td>25,969.580 ns</td><td>37,833.197 ns</td><td>1.00</td>
+</tr><tr><td>Initblk</td><td>2097152</td><td>74,637.295 ns</td><td>1,348.5212 ns</td><td>1,261.4076 ns</td><td>72,832.343 ns</td><td>77,215.570 ns</td><td>1.00</td>
+</tr><tr><td>Initblk</td><td>4194304</td><td>152,786.790 ns</td><td>1,608.4977 ns</td><td>1,425.8913 ns</td><td>150,735.950 ns</td><td>155,048.938 ns</td><td>1.00</td>
+</tr><tr><td>Initblk</td><td>8388608</td><td>329,044.334 ns</td><td>4,554.2840 ns</td><td>4,260.0800 ns</td><td>321,686.255 ns</td><td>333,962.036 ns</td><td>1.00</td>
+</tr><tr><td>Initblk</td><td>16777216</td><td>675,681.758 ns</td><td>11,742.6885 ns</td><td>10,984.1181 ns</td><td>657,890.527 ns</td><td>686,587.500 ns</td><td>1.00</td>
+</tr><tr><td>Initblk</td><td>33554432</td><td>3,230,906.962 ns</td><td>64,348.0007 ns</td><td>66,080.6591 ns</td><td>3,104,504.688 ns</td><td>3,352,971.875 ns</td><td>1.00</td>
+</tr><tr><td>Initblk</td><td>67108864</td><td>9,430,653.021 ns</td><td>47,734.9176 ns</td><td>44,651.2715 ns</td><td>9,319,520.312 ns</td><td>9,483,145.312 ns</td><td>1.00</td>
+</tr><tr><td>Initblk</td><td>134217728</td><td>18,881,993.333 ns</td><td>148,022.7243 ns</td><td>138,460.5481 ns</td><td>18,562,115.625 ns</td><td>19,037,240.625 ns</td><td>1.00</td>
+</tr><tr><td>Initblk</td><td>268435456</td><td>38,010,379.082 ns</td><td>221,611.2810 ns</td><td>196,452.6283 ns</td><td>37,771,750.000 ns</td><td>38,438,457.143 ns</td><td>1.00</td>
+</tr><tr><td>Initblk</td><td>536870912</td><td>77,811,612.381 ns</td><td>396,716.0514 ns</td><td>371,088.4406 ns</td><td>76,804,671.429 ns</td><td>78,153,071.429 ns</td><td>1.00</td>
+</tr><tr><td>Initblk</td><td>1073741824</td><td>157,657,043.333 ns</td><td>1,177,730.8661 ns</td><td>1,101,650.1829 ns</td><td>155,939,275.000 ns</td><td>159,102,425.000 ns</td><td>1.00</td>
+</tr><tr><td>Initblk</td><td>2147483648</td><td>318,437,770.000 ns</td><td>1,527,893.2620 ns</td><td>1,429,192.3052 ns</td><td>315,252,400.000 ns</td><td>320,307,100.000 ns</td><td>1.00</td>
+</tr></tbody></table>
+</body>
+</html>
